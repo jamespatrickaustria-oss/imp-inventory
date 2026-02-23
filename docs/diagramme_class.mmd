@@ -1,0 +1,57 @@
+classDiagram
+    class User {
+        +Integer id
+        +String name
+        +String email
+        +String password
+        +assignRole(role)
+        +hasPermission(permission)
+    }
+
+    class Role {
+        +Integer id
+        +String name
+        +String guard_name
+    }
+
+    class Category {
+        +Integer id
+        +String name
+        +String slug
+        +String image_path
+        +products() Relation
+    }
+
+    class Product {
+        +Integer id
+        +String name
+        +String sku
+        +Integer quantity
+        +Decimal price
+        +String image_path
+        +Integer min_stock
+        +isLowStock() Boolean
+    }
+
+    class Order {
+        +Integer id
+        +String order_number
+        +Decimal total_amount
+        +String status
+        +DateTime created_at
+    }
+
+    class OrderItem {
+        +Integer id
+        +Integer product_id
+        +Integer quantity
+        +Decimal unit_price
+        +Decimal subtotal
+    }
+
+    %% Relations
+    User "1" --> "0..*" Order : manages
+    User "m" -- "n" Role : has
+    Category "1" -- "0..*" Product : contains
+    Order "1" -- "1..*" OrderItem : includes
+    Product "1" -- "0..*" OrderItem : ordered_in

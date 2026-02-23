@@ -1,0 +1,62 @@
+/* 1. Hadu homa l-directives l-asliyin dial Tailwind v3 */
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode custom utilities and responsive styles */
+@layer utilities {
+    [x-cloak] { display: none !important; }
+
+    /* Responsive Logo/Image Styling */
+    .responsive-logo {
+        max-height: 4rem;
+        width: auto;
+        display: block;
+    }
+
+    @media (max-width: 640px) {
+        .responsive-logo {
+            max-height: 3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .responsive-logo {
+            max-height: 2.5rem;
+        }
+    }
+
+    .tap-feedback {
+        @apply active:opacity-75 active:scale-95 transition-all duration-75;
+    }
+
+    .tap-feedback-subtle {
+        @apply active:bg-opacity-80 transition-opacity duration-75;
+    }
+
+    .clickable-element {
+        @apply cursor-pointer select-none active:scale-95 transition-transform duration-75;
+    }
+
+    /* Dark mode base styles */
+    @media (prefers-color-scheme: dark) {
+        body {
+            @apply bg-dark-surface text-gray-50;
+        }
+    }
+
+    .dark body {
+        @apply bg-dark-surface text-gray-50;
+    }
+
+    /* Ensure dark mode buttons and interactive elements have consistent styling */
+    .dark button:not(:disabled) {
+        @apply tap-feedback;
+    }
+
+    .dark a:not(.no-tap) {
+        @apply tap-feedback;
+    }
+}
+

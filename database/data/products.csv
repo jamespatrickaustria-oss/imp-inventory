@@ -1,0 +1,8 @@
+category_id,name,sku,quantity,price,min_stock,image_path
+1,"iPhone 15 Pro Max","IPH15PM-001",15,14500.00,5,"products/iphone15.png"
+1,"Samsung S24 Ultra","SAM-S24U-002",8,12500.00,3,"products/s24.png"
+2,"MacBook Pro M3 14","MAC-M3-14",5,22000.00,2,"products/macbook.png"
+2,"Dell XPS 13 Plus","DELL-XPS-13",12,18500.00,4,"products/dell.png"
+3,"AirPods Pro 2","AIR-PRO2",45,2800.00,10,"products/airpods.png"
+3,"Logitech MX Master 3S","LOGI-MX3S",3,1100.00,5,"products/mouse.png"
+4,"Sony A7 IV","SONY-A74",4,28000.00,2,"products/sony.png"

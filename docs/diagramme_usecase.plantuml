@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Admin
+actor "Stock Manager" as SM
+actor "Sales Agent" as SA
+
+rectangle "System Management Stock" {
+  Admin -- (Manage Users & Roles)
+  Admin -- (View Dashboard Analytics)
+  
+  SM -- (Manage Products & Categories)
+  SM -- (Receive Stock Alerts)
+  
+  (Manage Products & Categories) <.. (View Products) : extends
+  SA -- (View Products)
+  SA -- (Create Sales Orders)
+  SA -- (Download PDF Invoice)
+}
+@endum

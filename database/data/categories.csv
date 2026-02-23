@@ -1,0 +1,5 @@
+name,slug,image_path
+"Smartphones","smartphones","categories/phones.png"
+"Laptops","laptops","categories/laptops.png"
+"Accessories","accessories","categories/acc.png"
+"Cameras","cameras","categories/cameras.png"
