@@ -19,6 +19,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
     Route::get('categories', App\Livewire\Pages\Admin\CategoryIndex::class)->name('categories');
     Route::get('reports', App\Livewire\Pages\Admin\Reports::class)->name('reports');
     Route::get('stock-movement', App\Livewire\Pages\Admin\StockMovementReport::class)->name('stock-movement');
+    Route::get('users', App\Livewire\Pages\Admin\UserList::class)->name('users');
+    Route::get('users/register', App\Livewire\Pages\Admin\UserRegister::class)->name('users.register');
 });
     
 Route::view('profile', 'profile')

@@ -105,7 +105,8 @@
                                             <button 
                                                 wire:click="permanentDeleteProduct({{ $product->id }})"
                                                 wire:confirm="Are you sure you want to permanently delete this product? This action cannot be undone!"
-                                                class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-semibold px-2">
+                                                class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-semibold px-2 inline-flex items-center gap-1">
+                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                                 Delete
                                             </button>
                                         @else
@@ -118,7 +119,8 @@
                                             <button 
                                                 wire:click="deleteProduct({{ $product->id }})"
                                                 wire:confirm="Are you sure you want to delete this product?"
-                                                class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-semibold px-2">
+                                                class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-semibold px-2 inline-flex items-center gap-1">
+                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                                 Delete
                                             </button>
                                         @endif

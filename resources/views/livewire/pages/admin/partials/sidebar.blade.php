@@ -34,12 +34,9 @@
 
             <div>
                 <p class="px-4 text-[11px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-3">Inventory</p>
+                
+                
                 <div class="space-y-1">
-                    <a href="{{ route('admin.products') }}" 
-                        class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.products') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
-                        <svg class="mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
-                        Products
-                    </a>
 
                     <a href="{{ route('admin.categories') }}" 
                         class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.categories') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
@@ -47,10 +44,35 @@
                         Categories
                     </a>
 
+                    <a href="{{ route('admin.products') }}" 
+                        class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.products') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
+                        <svg class="mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                        Products
+                    </a>
+
+                    
+
                     <a href="{{ route('admin.reports') }}" 
                         class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.reports') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
                         <svg class="mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6m4 6V7m4 10V9m-9 8h10a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         Reports
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <p class="px-4 text-[11px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-3">Users</p>
+                <div class="space-y-1">
+                    <a href="{{ route('admin.users') }}" 
+                        class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.users') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
+                        <svg class="mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        User List
+                    </a>
+
+                    <a href="{{ route('admin.users.register') }}" 
+                        class="flex items-center px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 group tap-feedback {{ request()->routeIs('admin.users.register') ? 'bg-blue-50 text-blue-700 dark:bg-dark-surface-tertiary dark:text-blue-400' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-dark-surface-tertiary dark:hover:text-white' }}">
+                        <svg class="mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" /></svg>
+                        Register User
                     </a>
                 </div>
             </div>
